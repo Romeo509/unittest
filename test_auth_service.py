@@ -13,7 +13,7 @@ class TestAuthSErvice(unittest.TestCase):
         mock_db_instance = MockDatabase.return_value
         mock_db_instance.get_user.return_value = {'password': 'password123'}
 
-        result = self.auth_service.authenticate('alice', 'password123'):
+        result = self.auth_service.authenticate('alice', 'password123')
         self.assertFalse(result)
 
     @patch('auth_service.Database')
